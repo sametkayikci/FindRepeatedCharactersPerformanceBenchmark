@@ -15,19 +15,19 @@ The goal is to determine which method performs better in terms of finding the mo
 ## Methods
 
 ### GetMostRepeatedCharacterWithCount
-This method uses a dictionary to find the most frequently occurring character in a text. It excludes space characters and calculates the number of each character in the text. Finally, it sorts the dictionary by number and selects the character with the highest number.
+This method uses a dictionary to find the most frequently occurring character in a text. It excludes space characters and calculates the number of each character in the text. Finally, it sorts the dictionary by number and selects the character with the highest number.  Does not support Unicode characters.
 
 ### GetMostRepeatedCharacterWithCount2
-This method iterates through each character in the input text and counts the occurrences of each character. It uses a dictionary to store the character counts and returns the character with the highest count.
+This method iterates through each character in the input text and counts the occurrences of each character. It uses a dictionary to store the character counts and returns the character with the highest count. Does not support Unicode characters.
 
 ### FindRepeatedCharacters
-This method counts the occurrences of each character in the input text using an array. It supports ASCII characters and calculates the character counts based on the ASCII value of the character as the index of the array. Supports Unicode characters.
+This method counts the occurrences of each character in the input text using an array. It supports ASCII characters and calculates the character counts based on the ASCII value of the character as the index of the array. Support Unicode characters.
 
 ### FindRepeatedCharactersUnsafe
-This method counts the occurrences of each character in the input text using an array and unsafe code. It improves performance by directly accessing the character pointer and incrementing the count in the array. Does not support Unicode characters.
+This method counts the occurrences of each character in the input text using an array and unsafe code. It improves performance by directly accessing the character pointer and incrementing the count in the array. Support Unicode characters.
 
 ### FindRepeatedCharacterLinq
-This method uses LINQ to group the characters in the input text and calculates the number of repetitions for each character. It returns a dictionary of repeated characters.
+This method uses LINQ to group the characters in the input text and calculates the number of repetitions for each character. It returns a dictionary of repeated characters.Support Unicode characters.
 
 ## Results
 The benchmark results can be found in the [BenchmarkDotNet](https://benchmarkdotnet.org) table format in the [Results.md](Results.md) file.
