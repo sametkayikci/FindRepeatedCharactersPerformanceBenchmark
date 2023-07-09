@@ -114,7 +114,7 @@ public class RepeatedCharactersBenchmark
 
         KeyValuePair<char, uint> mostRepeatedCharacter = default;
 
-        for (int i = 0; i < charCounts.Length; i++)
+        for (uint i = 0; i < charCounts.Length; i++)
         {
             if (charCounts[i] > mostRepeatedCharacter.Value)
             {
