@@ -6,9 +6,9 @@ This project is a benchmark application that compares the performance of differe
 The benchmark compares the performance of the following methods:
 - `GetMostRepeatedCharacterWithCount`: Finds the most repeated character using a dictionary-based approach.
 - `GetMostRepeatedCharacterWithCount2`: Finds the most repeated character using a dictionary-based approach.
-- `FindRepeatedCharacters`: Finds the most repeated character using an array-based approach.
-- `FindRepeatedCharactersUnsafe`: Finds the most repeated character using unsafe code to improve performance.
-- `FindRepeatedCharacterLinq`: Finds the most repeated character using LINQ.
+- `FindMostRepeatedCharacters`: Finds the most repeated character using an array-based approach.
+- `FindMostRepeatedCharactersUnsafe`: Finds the most repeated character using unsafe code to improve performance.
+- `FindMostRepeatedCharactersLinq`: Finds the most repeated character using LINQ.
 
 The goal is to determine which method performs better in terms of finding the most repeated character.
 
