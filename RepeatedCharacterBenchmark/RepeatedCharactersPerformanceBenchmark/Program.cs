@@ -102,7 +102,7 @@ public class RepeatedCharactersBenchmark
 
     private static KeyValuePair<char, uint> FindMostRepeatedCharacters(string text)
     {
-        int[] charCounts = new int[128];
+        uint[] charCounts = new uint[128];
 
         foreach (var chr in text)
         {
@@ -118,7 +118,7 @@ public class RepeatedCharactersBenchmark
         {
             if (charCounts[i] > mostRepeatedCharacter.Value)
             {
-                mostRepeatedCharacter = new KeyValuePair<char, uint>((char)i, (uint)charCounts[i]);
+                mostRepeatedCharacter = new KeyValuePair<char, uint>((char)i, charCounts[i]);
             }
         }
 
@@ -127,7 +127,7 @@ public class RepeatedCharactersBenchmark
 
     private static KeyValuePair<char, uint> FindMostRepeatedCharactersUnsafe(string text)
     {
-        int[] charCounts = new int[128];
+        uint[] charCounts = new uint[128];
 
         unsafe
         {
@@ -150,11 +150,11 @@ public class RepeatedCharactersBenchmark
 
         KeyValuePair<char, uint> mostRepeatedCharacter = default;
 
-        for (int i = 0; i < charCounts.Length; i++)
+        for (uint i = 0; i < charCounts.Length; i++)
         {
             if (charCounts[i] > mostRepeatedCharacter.Value)
             {
-                mostRepeatedCharacter = new KeyValuePair<char, uint>((char)i, (uint)charCounts[i]);
+                mostRepeatedCharacter = new KeyValuePair<char, uint>((char)i, charCounts[i]);
             }
         }
 
