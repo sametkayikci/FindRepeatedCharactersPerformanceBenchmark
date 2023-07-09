@@ -1,4 +1,4 @@
-# Repeated Characters Performance Benchmark
+# Find Most Repeated Characters Performance Benchmark
 Which is the fastest method to find the most repeated character?
 This project is a benchmark application that compares the performance of different methods for finding repeated characters in a text.
 
