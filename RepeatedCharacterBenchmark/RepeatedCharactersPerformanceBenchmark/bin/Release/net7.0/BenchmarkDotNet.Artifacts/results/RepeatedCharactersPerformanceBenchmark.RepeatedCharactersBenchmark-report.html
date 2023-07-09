@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>RepeatedCharactersPerformanceBenchmark.RepeatedCharactersBenchmark-20230709-041337</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.5, OS=Windows 11 (10.0.22621.1702/22H2/2022Update/SunValley2)
+11th Gen Intel Core i7-1165G7 2.80GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=7.0.203
+  [Host]     : .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                      Method</th><th>N</th><th>   Mean</th><th> Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>GetMostRepeatedCharacterWithCount</td><td>10</td><td>288.51 ns</td><td>2.833 ns</td><td>2.650 ns</td>
+</tr><tr><td>GetMostRepeatedCharacterWithCount2</td><td>10</td><td>169.34 ns</td><td>3.367 ns</td><td>4.258 ns</td>
+</tr><tr><td>FindRepeatedCharacters</td><td>10</td><td>104.62 ns</td><td>0.626 ns</td><td>0.585 ns</td>
+</tr><tr><td>FindRepeatedCharactersUnsafe</td><td>10</td><td>97.20 ns</td><td>1.083 ns</td><td>1.013 ns</td>
+</tr><tr><td>FindRepeatedCharacterLinq</td><td>10</td><td>467.53 ns</td><td>6.250 ns</td><td>5.846 ns</td>
+</tr><tr><td>GetMostRepeatedCharacterWithCount</td><td>100</td><td>2,082.16 ns</td><td>33.993 ns</td><td>31.797 ns</td>
+</tr><tr><td>GetMostRepeatedCharacterWithCount2</td><td>100</td><td>1,105.78 ns</td><td>10.033 ns</td><td>9.385 ns</td>
+</tr><tr><td>FindRepeatedCharacters</td><td>100</td><td>153.08 ns</td><td>3.097 ns</td><td>7.882 ns</td>
+</tr><tr><td>FindRepeatedCharactersUnsafe</td><td>100</td><td>165.92 ns</td><td>1.414 ns</td><td>1.323 ns</td>
+</tr><tr><td>FindRepeatedCharacterLinq</td><td>100</td><td>3,814.08 ns</td><td>73.797 ns</td><td>65.419 ns</td>
+</tr><tr><td>GetMostRepeatedCharacterWithCount</td><td>1000</td><td>16,066.66 ns</td><td>306.461 ns</td><td>449.207 ns</td>
+</tr><tr><td>GetMostRepeatedCharacterWithCount2</td><td>1000</td><td>8,440.00 ns</td><td>167.260 ns</td><td>156.455 ns</td>
+</tr><tr><td>FindRepeatedCharacters</td><td>1000</td><td>771.47 ns</td><td>14.773 ns</td><td>18.143 ns</td>
+</tr><tr><td>FindRepeatedCharactersUnsafe</td><td>1000</td><td>713.07 ns</td><td>13.859 ns</td><td>21.164 ns</td>
+</tr><tr><td>FindRepeatedCharacterLinq</td><td>1000</td><td>18,543.42 ns</td><td>183.907 ns</td><td>172.026 ns</td>
+</tr><tr><td>GetMostRepeatedCharacterWithCount</td><td>10000</td><td>147,590.99 ns</td><td>1,962.791 ns</td><td>1,739.963 ns</td>
+</tr><tr><td>GetMostRepeatedCharacterWithCount2</td><td>10000</td><td>80,075.18 ns</td><td>1,588.425 ns</td><td>1,408.097 ns</td>
+</tr><tr><td>FindRepeatedCharacters</td><td>10000</td><td>6,266.70 ns</td><td>53.613 ns</td><td>50.150 ns</td>
+</tr><tr><td>FindRepeatedCharactersUnsafe</td><td>10000</td><td>5,565.20 ns</td><td>52.678 ns</td><td>46.698 ns</td>
+</tr><tr><td>FindRepeatedCharacterLinq</td><td>10000</td><td>144,340.50 ns</td><td>2,139.167 ns</td><td>2,000.978 ns</td>
+</tr></tbody></table>
+</body>
+</html>
