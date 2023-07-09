@@ -7,7 +7,7 @@ This project is a benchmark application that compares the performance of differe
 
 ## Test Scenario
 The benchmark compares the performance of the following methods:
-- `GetMostRepeatedCharacterWithCount2`: Finds the most repeated character using a dictionary-based approach.
+- `GetMostRepeatedCharacterWithCount`: Finds the most repeated character using a dictionary-based approach.
 - `GetMostRepeatedCharacterWithCount2`: Finds the most repeated character using a dictionary-based approach.
 - `FindRepeatedCharacters`: Finds the most repeated character using an array-based approach.
 - `FindRepeatedCharactersUnsafe`: Finds the most repeated character using unsafe code to improve performance.
